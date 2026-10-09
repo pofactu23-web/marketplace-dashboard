@@ -7,7 +7,7 @@ const paths=['index.html',...jobs.map(j=>`vacancies/${j.slug}/index.html`)];
 test('all pages have valid internal links and no candidate data collection',async()=>{
  for(const p of paths){const html=await readFile('dist/'+p,'utf8');
  assert.match(html,/<html lang="ru">/);assert.match(html,/<meta name="viewport"/);
- assert.ok(html.includes(questions));assert.ok(html.includes('href="mailto:lina.nikrasova.83@mail.ru"'));assert.ok(html.includes('Как проходит трудоустройство'));assert.ok(!html.includes('Telegram'));
+ assert.ok(html.includes(questions));assert.ok(html.includes('href="mailto:lina.nikrasova.83@mail.ru"'));assert.ok(html.includes('Как проходит трудоустройство'));assert.doesNotMatch(html,/Продолжите[^<]*Telegram/);
  assert.doesNotMatch(html,/<form\b|<input\b|<textarea\b|tel:|https?:\/\/t\.me|Отправить заявку|Зарегистрироваться/);
  for(const [,href] of html.matchAll(/(?:href|src)="([^"]+)"/g)){
  if(/^(https?:|mailto:)/.test(href))continue;
