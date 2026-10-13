@@ -13,3 +13,5 @@
 .review-date{font-size:12px;color:var(--muted)}.review-avatar{display:grid;place-items:center;flex-shrink:0;width:40px;height:40px;border-radius:50%;background:#eaf0e3;color:#658351;font-size:16px}
 
 .review-contact{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px;padding-top:14px;border-top:1px solid var(--line);font-size:13px;color:var(--green);overflow-wrap:anywhere}.review-contact:hover{text-decoration:underline}.review-contact .arrow-svg{flex-shrink:0}
+
+.company-details{border-top:1px solid var(--line);margin-top:28px;padding-top:24px}.company-details h2{font-size:16px;letter-spacing:0;margin-bottom:10px}.company-details p{font-size:13px}.company-details dl{display:flex;flex-wrap:wrap;gap:12px 32px;margin:12px 0 0;font-size:12px;color:var(--muted)}.company-details dl>div{display:flex;flex-wrap:wrap;gap:8px}.company-details dd{margin:0;color:var(--ink);overflow-wrap:anywhere}
